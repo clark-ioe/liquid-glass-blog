@@ -1,0 +1,83 @@
+{
+  "name": "liquid-glass-blog",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LiquidGlass Blog — A minimal and elegant blog template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clark-ioe/liquid-glass-blog.git"
+  },
+  "homepage": "https://github.com/clark-ioe/liquid-glass-blog",
+  "author": "Clark <clark@intentoriented.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:eslint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings=0",
+    "lint:fix": "pnpm run lint:eslint --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint-staged": "lint-staged",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next",
+    "analyze": "ANALYZE=true next build",
+    "preview": "next build && next start",
+    "deploy": "pnpm build && vercel --prod",
+    "postinstall": "next telemetry disable",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "date-fns": "^2.30.0",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.294.0",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "rehype-highlight": "^7.0.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.0",
+    "tailwind-merge": "^2.0.0",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.31",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-unused-imports": "^4.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "next-sitemap": "^4.2.3",
+    "postcss": "^8",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{md,json,css,scss,html}": [
+      "prettier --write"
+    ]
+  }
+}

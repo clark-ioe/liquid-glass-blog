@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://liquid-glass-blog.vercel.app/
+
+# Sitemaps
+Sitemap: https://liquid-glass-blog.vercel.app/sitemap.xml
