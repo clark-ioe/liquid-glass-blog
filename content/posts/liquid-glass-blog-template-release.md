@@ -45,10 +45,21 @@ For detailed configuration and feature guides, visit the online documentation:
 
 ## Branch Management Best Practices
 
-- Keep the main branch stable and production-ready
-- Develop new features in `feature/xxx` branches, then merge into main
-- Use `hotfix/xxx` branches for urgent bug fixes
-- Regularly sync with upstream to avoid large codebase divergence
+To develop based on this project and keep up with future updates:
+
+- Fork this repository to your own GitHub account for custom development.
+- Set the original repo as your `upstream` to easily fetch new features and bug fixes:
+  ```bash
+  git remote add upstream https://github.com/clark-ioe/liquid-glass-blog.git
+  git fetch upstream
+  git merge upstream/main
+  # or use rebase if preferred
+  git rebase upstream/main
+  ```
+- Keep your `main` branch stable and production-ready.
+- Develop new features in `feature/xxx` branches, then merge into `main`.
+- Use `hotfix/xxx` branches for urgent bug fixes.
+- Regularly sync with upstream to avoid large codebase divergence and benefit from ongoing improvements.
 
 ## Recommended Reading
 
